@@ -302,7 +302,7 @@ assigning key-value pairs to nodes responsible for storing them:
 \item{\textbf{Scheme 1}: Use consistent hashing. The node responsible for key k is the first node whose ID is equal to or follows k in the identifier space (modulo 2m).}
 \item{\textbf{Scheme 2}: Order the nodes numerically by their IDs. If a nodes
 position in this ranking is $r$ (where $r \in [0, n)$), it is responsible for
-keys in the range $[ r · 2m, r+1 · 2m)$.}
+keys in the range $[r\cdot 2m, (r+1)\cdot 2m)$.}
 \end{itemize}
 
 \begin{enumerate}
