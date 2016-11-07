@@ -299,10 +299,10 @@ nodes name (e.g., ID1 = h(”node1”)). He is considering two schemes for
 assigning key-value pairs to nodes responsible for storing them:
 
 \begin{itemize}
-\item{\textbf{Scheme 1}: Use consistent hashing. The node responsible for key k is the first node whose ID is equal to or follows k in the identifier space (modulo 2m).}
+\item{\textbf{Scheme 1}: Use consistent hashing. The node responsible for key k is the first node whose ID is equal to or follows k in the identifier space (modulo $2^m$).}
 \item{\textbf{Scheme 2}: Order the nodes numerically by their IDs. If a nodes
 position in this ranking is $r$ (where $r \in [0, n)$), it is responsible for
-keys in the range $[r\cdot 2m, (r+1)\cdot 2m)$.}
+keys in the range $[\frac{r}{n}\cdot2^m, \frac{r+1}{n}\cdot2^m)$.}
 \end{itemize}
 
 \begin{enumerate}
